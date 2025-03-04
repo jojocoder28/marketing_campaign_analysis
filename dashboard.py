@@ -9,7 +9,6 @@ def load_data(file):
     return pd.read_excel(file)
 
 def main():
-    st.set_page_config(page_title="Marketing Dashboard", layout="wide")
     st.title("📊 Marketing Campaign Analysis Dashboard")
     
     df = load_data(data_file)
@@ -24,9 +23,9 @@ def main():
     st.markdown("---")
     
     # Interactive filtering
-    st.sidebar.header("🔍 Filter Options")
+    st.subheader("🔍 Filter Options")
     education_levels = df["Education"].unique()
-    selected_education = st.sidebar.multiselect("Select Education Level", education_levels, default=education_levels)
+    selected_education = st.multiselect("Select Education Level", education_levels, default=education_levels)
     df_filtered = df[df["Education"].isin(selected_education)]
     
     # Show raw data
