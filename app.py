@@ -171,7 +171,7 @@ elif page == "Dashboard":
     # Load dataset from hardcoded file
     
 
-    def main():
+    def main2():
         st.title("📊 Marketing Campaign Analysis Dashboard")
         
         
@@ -222,6 +222,5 @@ elif page == "Dashboard":
         st.subheader("📋 Summary Statistics")
         st.write(df_filtered.describe())
         
-    if __name__ == "__main__":
-        main()
+    main2()
 
